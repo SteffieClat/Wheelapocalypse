@@ -843,4 +843,11 @@ if(obj_game_manager.current_game_state != GAME_STATE.PAUSED){	/// @DnDAction :
 			/// @DnDArgument : "spriteind" "spr_character_boost"
 			/// @DnDSaveInfo : "spriteind" "spr_character_boost"
 			sprite_index = spr_character_boost;
-			image_index += 0;}}}
+			image_index += 0;
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 2EFFC27E
+			/// @DnDParent : 3A35964B
+			/// @DnDArgument : "var" "gravity_strength"
+			gravity_strength = 0;}}}
