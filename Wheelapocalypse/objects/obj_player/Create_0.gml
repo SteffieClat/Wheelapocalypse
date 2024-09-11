@@ -51,7 +51,7 @@ current_player_state = PLAYER_STATE.RUN;
 /// @DnDHash : 76DC0365
 /// @DnDComment : // Variables used for the players movement
 /// @DnDInput : 4
-/// @DnDArgument : "expr" "110"
+/// @DnDArgument : "expr" "30"
 /// @DnDArgument : "expr_1" "10"
 /// @DnDArgument : "expr_2" "0.8"
 /// @DnDArgument : "expr_3" "0.0"
@@ -59,7 +59,7 @@ current_player_state = PLAYER_STATE.RUN;
 /// @DnDArgument : "var_1" "jump_threshold"
 /// @DnDArgument : "var_2" "gravity_strength"
 /// @DnDArgument : "var_3" "y_velo"
-jump_strength = 110;
+jump_strength = 30;
 jump_threshold = 10;
 gravity_strength = 0.8;
 y_velo = 0.0;
@@ -79,8 +79,9 @@ boost_cooldown = 0;
 /// @DnDVersion : 1
 /// @DnDHash : 545F7965
 /// @DnDComment : // Jump state
+/// @DnDArgument : "expr" "false"
 /// @DnDArgument : "var" "has_jumped"
-has_jumped = 0;
+has_jumped = false;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
@@ -138,25 +139,19 @@ _shadow.set_y_offset(100);
 /// @DnDHash : 7AEE1A72
 /// @DnDComment : // Function used when the player is hit by an enemy
 /// @DnDArgument : "funcName" "kill_player"
-function kill_player() 
-{
-	/// @DnDAction : YoYo Games.Common.If_Expression
+function kill_player() {	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
 	/// @DnDHash : 532E162B
 	/// @DnDComment : // Checks the game is playing
 	/// @DnDParent : 7AEE1A72
 	/// @DnDArgument : "expr" "obj_game_manager.current_game_state == GAME_STATE.PLAYING"
-	if(obj_game_manager.current_game_state == GAME_STATE.PLAYING)
-	{
-		/// @DnDAction : YoYo Games.Common.If_Expression
+	if(obj_game_manager.current_game_state == GAME_STATE.PLAYING){	/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
 		/// @DnDHash : 0203F857
 		/// @DnDComment : // Checks if a shield object exists within the room
 		/// @DnDParent : 532E162B
 		/// @DnDArgument : "expr" "instance_exists(obj_shield)"
-		if(instance_exists(obj_shield))
-		{
-			/// @DnDAction : YoYo Games.Audio.Play_Audio
+		if(instance_exists(obj_shield)){	/// @DnDAction : YoYo Games.Audio.Play_Audio
 			/// @DnDVersion : 1.1
 			/// @DnDHash : 744751EE
 			/// @DnDComment : // Plays shield break sound
@@ -186,16 +181,13 @@ function kill_player()
 				/// @DnDHash : 00E71E19
 				/// @DnDParent : 2DBF95E4
 				exit;
-			}
-		}
+			}}
 	
 		/// @DnDAction : YoYo Games.Common.Else
 		/// @DnDVersion : 1
 		/// @DnDHash : 424115D0
 		/// @DnDParent : 532E162B
-		else
-		{
-			/// @DnDAction : YoYo Games.Audio.Play_Audio
+		else{	/// @DnDAction : YoYo Games.Audio.Play_Audio
 			/// @DnDVersion : 1.1
 			/// @DnDHash : 6DC8E485
 			/// @DnDComment : // Plays death sound
@@ -272,18 +264,12 @@ function kill_player()
 				/// @DnDComment : // If the player is the owner
 				/// @DnDParent : 64ECB406
 				/// @DnDArgument : "expr" "owner == _player"
-				if(owner == _player)
-				{
-					/// @DnDAction : YoYo Games.Common.Function_Call
+				if(owner == _player){	/// @DnDAction : YoYo Games.Common.Function_Call
 					/// @DnDVersion : 1
 					/// @DnDHash : 78DDFF28
 					/// @DnDComment : // Call fade out function
 					/// @DnDParent : 094DFE58
 					/// @DnDArgument : "function" "fade_out"
 					/// @DnDArgument : "arg" "2.2"
-					fade_out(2.2);
-				}
-			}
-		}
-	}
-}
+					fade_out(2.2);}
+			}}}}
