@@ -79,35 +79,29 @@ draw_set_alpha(obj_button_retry.image_alpha);
 /// @DnDVersion : 1
 /// @DnDHash : 0C1720EA
 /// @DnDComment : // Check if player has set new high score
-/// @DnDArgument : "expr" "obj_game_manager.current_distance == global.highscore"
-if(obj_game_manager.current_distance == global.highscore)
-{
-	/// @DnDAction : YoYo Games.Drawing.Draw_Value
+/// @DnDArgument : "expr" "obj_game_manager.current_gold == global.highscore"
+if(obj_game_manager.current_gold == global.highscore){	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1
 	/// @DnDHash : 2A15AB30
 	/// @DnDComment : // Draw text for new high score
 	/// @DnDParent : 0C1720EA
 	/// @DnDArgument : "x" "room_width * 0.5"
 	/// @DnDArgument : "y" "room_height * 0.45"
-	/// @DnDArgument : "caption" ""New Best Distance!\n" + string(floor(obj_game_manager.current_distance)) + "M!""
-	draw_text(room_width * 0.5, room_height * 0.45, string("New Best Distance!\n" + string(floor(obj_game_manager.current_distance)) + "M!") + "");
-}
+	/// @DnDArgument : "caption" ""New Best Amount!\n" + string(floor(obj_game_manager.current_gold)) + "K!""
+	draw_text(room_width * 0.5, room_height * 0.45, string("New Best Amount!\n" + string(floor(obj_game_manager.current_gold)) + "K!") + "");}
 
 /// @DnDAction : YoYo Games.Common.Else
 /// @DnDVersion : 1
 /// @DnDHash : 49B160A1
-else
-{
-	/// @DnDAction : YoYo Games.Drawing.Draw_Value
+else{	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1
 	/// @DnDHash : 7BF0188A
 	/// @DnDComment : // Draw text for no new high score
 	/// @DnDParent : 49B160A1
 	/// @DnDArgument : "x" "room_width * 0.5"
 	/// @DnDArgument : "y" "room_height * 0.45"
-	/// @DnDArgument : "caption" ""You reached " + string(floor(obj_game_manager.current_distance)) + "M!\nCurrent Highscore " + string(floor(global.highscore)) + "M""
-	draw_text(room_width * 0.5, room_height * 0.45, string("You reached " + string(floor(obj_game_manager.current_distance)) + "M!\nCurrent Highscore " + string(floor(global.highscore)) + "M") + "");
-}
+	/// @DnDArgument : "caption" ""You got " + string(floor(obj_game_manager.current_gold)) + "K!\nCurrent Highscore " + string(floor(global.highscore)) + "K""
+	draw_text(room_width * 0.5, room_height * 0.45, string("You got " + string(floor(obj_game_manager.current_gold)) + "K!\nCurrent Highscore " + string(floor(global.highscore)) + "K") + "");}
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

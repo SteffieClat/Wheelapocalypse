@@ -12,33 +12,26 @@ var _delta_time = delta_time * 0.000001;
 /// @DnDComment : // Checks if prefetch flag has not been met
 /// @DnDArgument : "expr" "has_prefetched"
 /// @DnDArgument : "not" "1"
-if(!(has_prefetched))
-{
-	/// @DnDAction : YoYo Games.Common.Variable
+if(!(has_prefetched)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 6CCD5C47
 	/// @DnDComment : // Sets delta time back to zero as game is still loading certain objects
 	/// @DnDParent : 7EDBDEFC
 	/// @DnDArgument : "var" "_delta_time"
-	_delta_time = 0;
-}
+	_delta_time = 0;}
 
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1
 /// @DnDHash : 2DCD1CD0
 /// @DnDComment : // Change logic depending on the current game state.
 /// @DnDArgument : "expr" "current_game_state"
-var l2DCD1CD0_0 = current_game_state;
-switch(l2DCD1CD0_0)
-{
-	/// @DnDAction : YoYo Games.Switch.Case
+var l2DCD1CD0_0 = current_game_state;switch(l2DCD1CD0_0){	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
 	/// @DnDHash : 3DE9F46A
 	/// @DnDComment : // Logic for while the game is playing.
 	/// @DnDParent : 2DCD1CD0
 	/// @DnDArgument : "const" "GAME_STATE.PLAYING"
-	case GAME_STATE.PLAYING:
-		/// @DnDAction : YoYo Games.Common.Function_Call
+	case GAME_STATE.PLAYING:	/// @DnDAction : YoYo Games.Common.Function_Call
 		/// @DnDVersion : 1
 		/// @DnDHash : 6E2138AE
 		/// @DnDComment : // Calls the update speed function passing though the delta time parameter
@@ -64,9 +57,7 @@ switch(l2DCD1CD0_0)
 		/// @DnDParent : 3DE9F46A
 		/// @DnDArgument : "var" "background_cooldown"
 		/// @DnDArgument : "op" "3"
-		if(background_cooldown <= 0)
-		{
-			/// @DnDAction : YoYo Games.Common.Function_Call
+		if(background_cooldown <= 0){	/// @DnDAction : YoYo Games.Common.Function_Call
 			/// @DnDVersion : 1
 			/// @DnDHash : 7024F343
 			/// @DnDComment : // Calls the change state function for the backgrounds
@@ -81,9 +72,7 @@ switch(l2DCD1CD0_0)
 			/// @DnDParent : 19E8BE4A
 			/// @DnDArgument : "expr" "random_range(100, 100 + 50 * current_level)"
 			/// @DnDArgument : "var" "background_cooldown"
-			background_cooldown = random_range(100, 100 + 50 * current_level);
-		}
-		break;
+			background_cooldown = random_range(100, 100 + 50 * current_level);}	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
@@ -91,8 +80,7 @@ switch(l2DCD1CD0_0)
 	/// @DnDComment : // Logic for when the player is dying
 	/// @DnDParent : 2DCD1CD0
 	/// @DnDArgument : "const" "GAME_STATE.DYING"
-	case GAME_STATE.DYING:
-		/// @DnDAction : YoYo Games.Common.Function_Call
+	case GAME_STATE.DYING:	/// @DnDAction : YoYo Games.Common.Function_Call
 		/// @DnDVersion : 1
 		/// @DnDHash : 7A2B78CA
 		/// @DnDComment : // Calls the update speed function
@@ -107,9 +95,7 @@ switch(l2DCD1CD0_0)
 		/// @DnDComment : // Checks if the speed is currently zero and the player is now insvisible
 		/// @DnDParent : 3A2C89DD
 		/// @DnDArgument : "expr" "current_speed == 0 && obj_player.image_alpha == 0"
-		if(current_speed == 0 && obj_player.image_alpha == 0)
-		{
-			/// @DnDAction : YoYo Games.Common.Variable
+		if(current_speed == 0 && obj_player.image_alpha == 0){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 4B04D78F
 			/// @DnDComment : // Sets the games current state to end
@@ -123,12 +109,10 @@ switch(l2DCD1CD0_0)
 			/// @DnDHash : 6FF9AE44
 			/// @DnDComment : // Checks if the current distance has passed the previously set high score
 			/// @DnDParent : 3C59FEC1
-			/// @DnDArgument : "var" "current_distance"
+			/// @DnDArgument : "var" "current_gold"
 			/// @DnDArgument : "op" "2"
 			/// @DnDArgument : "value" "global.highscore"
-			if(current_distance > global.highscore)
-			{
-				/// @DnDAction : YoYo Games.Common.Temp_Variable
+			if(current_gold > global.highscore){	/// @DnDAction : YoYo Games.Common.Temp_Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 595ACE14
 				/// @DnDComment : // Makes a new flag over the players position that will drop into the level and has its distance set
@@ -157,9 +141,9 @@ switch(l2DCD1CD0_0)
 				/// @DnDHash : 53A83222
 				/// @DnDComment : // Sets the global highscore variable to the current distance
 				/// @DnDParent : 6FF9AE44
-				/// @DnDArgument : "value" "current_distance"
+				/// @DnDArgument : "value" "current_gold"
 				/// @DnDArgument : "var" "global.highscore"
-				global.highscore = current_distance;
+				global.highscore = current_gold;
 			
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
@@ -177,17 +161,14 @@ switch(l2DCD1CD0_0)
 				/// @DnDParent : 6FF9AE44
 				/// @DnDArgument : "expr" "buffer_exists(highscore_buffer)"
 				/// @DnDArgument : "not" "1"
-				if(!(buffer_exists(highscore_buffer)))
-				{
-					/// @DnDAction : YoYo Games.Common.Variable
+				if(!(buffer_exists(highscore_buffer))){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 4D19F0D1
 					/// @DnDComment : // Creates highscore buffer
 					/// @DnDParent : 28AC265D
 					/// @DnDArgument : "expr" "buffer_create(16384, buffer_fixed, 2)"
 					/// @DnDArgument : "var" "highscore_buffer"
-					highscore_buffer = buffer_create(16384, buffer_fixed, 2);
-				}
+					highscore_buffer = buffer_create(16384, buffer_fixed, 2);}
 			
 				/// @DnDAction : YoYo Games.Buffers.Buffer_Seek
 				/// @DnDVersion : 1.1
@@ -217,16 +198,13 @@ switch(l2DCD1CD0_0)
 				/// @DnDParent : 6FF9AE44
 				/// @DnDArgument : "buffer" "highscore_buffer"
 				/// @DnDArgument : "filename" ""ENDLESS_RUNNER_HS.sav""
-				buffer_save(highscore_buffer, "ENDLESS_RUNNER_HS.sav");
-			}
+				buffer_save(highscore_buffer, "ENDLESS_RUNNER_HS.sav");}
 		
 			/// @DnDAction : YoYo Games.Common.Else
 			/// @DnDVersion : 1
 			/// @DnDHash : 6412EF46
 			/// @DnDParent : 3C59FEC1
-			else
-			{
-				/// @DnDAction : YoYo Games.Audio.Stop_Audio
+			else{	/// @DnDAction : YoYo Games.Audio.Stop_Audio
 				/// @DnDVersion : 1
 				/// @DnDHash : 3E6104F9
 				/// @DnDComment : // Stops the current music
@@ -258,8 +236,4 @@ switch(l2DCD1CD0_0)
 				/// @DnDParent : 6412EF46
 				/// @DnDArgument : "var" "_gameover_seq"
 				/// @DnDArgument : "value" "layer_sequence_create("GUI", 0, 0, seq_gameover)"
-				var _gameover_seq = layer_sequence_create("GUI", 0, 0, seq_gameover);
-			}
-		}
-		break;
-}
+				var _gameover_seq = layer_sequence_create("GUI", 0, 0, seq_gameover);}}	break;}

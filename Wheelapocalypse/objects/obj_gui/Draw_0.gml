@@ -78,8 +78,8 @@ draw_set_valign(fa_top);
 /// @DnDArgument : "y" "-8"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" """"
-/// @DnDArgument : "var" "parse_value(obj_game_manager.current_gold)"
-draw_text(x + 80, y + -8, string("") + string(parse_value(obj_game_manager.current_gold)));
+/// @DnDArgument : "var" "parse_value(obj_game_manager.current_gold) + "K""
+draw_text(x + 80, y + -8, string("") + string(parse_value(obj_game_manager.current_gold) + "K"));
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
@@ -100,3 +100,12 @@ draw_set_alpha(1);
 /// @DnDComment : // Reset the alignment
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+
+/// @DnDAction : YoYo Games.Drawing.Draw_Sprite
+/// @DnDVersion : 1
+/// @DnDHash : 1E9ACB43
+/// @DnDArgument : "x" "-50"
+/// @DnDArgument : "y" "50"
+/// @DnDArgument : "sprite" "spr_enemy_ground"
+/// @DnDSaveInfo : "sprite" "spr_enemy_ground"
+draw_sprite(spr_enemy_ground, 0, -50, 50);

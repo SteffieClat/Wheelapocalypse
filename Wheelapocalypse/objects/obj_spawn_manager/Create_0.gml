@@ -17,9 +17,7 @@ enemy_cooldown = 100;
 /// @DnDHash : 57F024C1
 /// @DnDComment : // Spawns random enemy
 /// @DnDArgument : "funcName" "spawn_enemy"
-function spawn_enemy() 
-{
-	/// @DnDAction : YoYo Games.Common.Temp_Variable
+function spawn_enemy() {	/// @DnDAction : YoYo Games.Common.Temp_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 1E024028
 	/// @DnDComment : // Sets the x position enemy will be spawned on
@@ -43,16 +41,12 @@ function spawn_enemy()
 	/// @DnDComment : // Switch statement of available types$(13_10)// Creates new enemy and updates cooldown based on distance needed
 	/// @DnDParent : 57F024C1
 	/// @DnDArgument : "expr" "_type"
-	var l01006D7D_0 = _type;
-	switch(l01006D7D_0)
-	{
-		/// @DnDAction : YoYo Games.Switch.Case
+	var l01006D7D_0 = _type;switch(l01006D7D_0){	/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 72801A82
 		/// @DnDComment : // Beam high
 		/// @DnDParent : 01006D7D
-		case 0:
-			/// @DnDAction : YoYo Games.Instances.Create_Instance
+		case 0:	/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1
 			/// @DnDHash : 45480A29
 			/// @DnDParent : 72801A82
@@ -69,8 +63,7 @@ function spawn_enemy()
 			/// @DnDParent : 72801A82
 			/// @DnDArgument : "expr" "10 + 1.8"
 			/// @DnDArgument : "var" "spawn_cooldown"
-			spawn_cooldown = 10 + 1.8;
-			break;
+			spawn_cooldown = 10 + 1.8;	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -78,8 +71,7 @@ function spawn_enemy()
 		/// @DnDComment : // Beam low
 		/// @DnDParent : 01006D7D
 		/// @DnDArgument : "const" "1"
-		case 1:
-			/// @DnDAction : YoYo Games.Instances.Create_Instance
+		case 1:	/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1
 			/// @DnDHash : 0CCDF70D
 			/// @DnDParent : 0FB976DA
@@ -96,8 +88,7 @@ function spawn_enemy()
 			/// @DnDParent : 0FB976DA
 			/// @DnDArgument : "expr" "10 + 1.8"
 			/// @DnDArgument : "var" "spawn_cooldown"
-			spawn_cooldown = 10 + 1.8;
-			break;
+			spawn_cooldown = 10 + 1.8;	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -105,8 +96,7 @@ function spawn_enemy()
 		/// @DnDComment : // Normal enemy
 		/// @DnDParent : 01006D7D
 		/// @DnDArgument : "const" "2"
-		case 2:
-			/// @DnDAction : YoYo Games.Instances.Create_Instance
+		case 2:	/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1
 			/// @DnDHash : 53276F89
 			/// @DnDParent : 03024BCF
@@ -122,9 +112,7 @@ function spawn_enemy()
 			/// @DnDHash : 46D866C9
 			/// @DnDParent : 03024BCF
 			/// @DnDArgument : "var" "spawn_cooldown"
-			spawn_cooldown = 0;
-			break;
-	}
+			spawn_cooldown = 0;	break;}
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -133,17 +121,14 @@ function spawn_enemy()
 	/// @DnDParent : 57F024C1
 	/// @DnDArgument : "expr" "250 - (50 * clamp((obj_game_manager.current_level / 2), 1, 3.5))"
 	/// @DnDArgument : "var" "enemy_cooldown"
-	enemy_cooldown = 250 - (50 * clamp((obj_game_manager.current_level / 2), 1, 3.5));
-}
+	enemy_cooldown = 250 - (50 * clamp((obj_game_manager.current_level / 2), 1, 3.5));}
 
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
 /// @DnDHash : 3B5287F8
 /// @DnDComment : // Spawns random powerup
 /// @DnDArgument : "funcName" "spawn_powerup"
-function spawn_powerup() 
-{
-	/// @DnDAction : YoYo Games.Common.Temp_Variable
+function spawn_powerup() {	/// @DnDAction : YoYo Games.Common.Temp_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 279EAE35
 	/// @DnDComment : // Sets the x and y coordinates for powerup drop$(13_10)	// Y values are preset and chosen at random
@@ -152,9 +137,9 @@ function spawn_powerup()
 	/// @DnDArgument : "var" "_spawn_x"
 	/// @DnDArgument : "value" "room_width * 2"
 	/// @DnDArgument : "var_1" "_new_y"
-	/// @DnDArgument : "value_1" "choose(140, 315, 490, 665, 840)"
+	/// @DnDArgument : "value_1" "choose(400,450,500,550)"
 	var _spawn_x = room_width * 2;
-	var _new_y = choose(140, 315, 490, 665, 840);
+	var _new_y = choose(400,450,500,550);
 
 	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1
@@ -163,9 +148,10 @@ function spawn_powerup()
 	/// @DnDParent : 3B5287F8
 	/// @DnDArgument : "xpos" "_spawn_x + 92"
 	/// @DnDArgument : "ypos" "_new_y"
-	/// @DnDArgument : "objectid" "choose(obj_pickup_boost, obj_pickup_shield)"
+	/// @DnDArgument : "objectid" "obj_platform"
 	/// @DnDArgument : "layer" ""Stage""
-	instance_create_layer(_spawn_x + 92, _new_y, "Stage", choose(obj_pickup_boost, obj_pickup_shield));
+	/// @DnDSaveInfo : "objectid" "obj_platform"
+	instance_create_layer(_spawn_x + 92, _new_y, "Stage", obj_platform);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -183,8 +169,7 @@ function spawn_powerup()
 	/// @DnDParent : 3B5287F8
 	/// @DnDArgument : "expr" "100 * min(obj_game_manager.current_level, 5)"
 	/// @DnDArgument : "var" "powerup_cooldown"
-	powerup_cooldown = 100 * min(obj_game_manager.current_level, 5);
-}
+	powerup_cooldown = 100 * min(obj_game_manager.current_level, 5);}
 
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
@@ -192,9 +177,7 @@ function spawn_powerup()
 /// @DnDComment : // Function for spawning a preset reward
 /// @DnDArgument : "funcName" "spawn_reward"
 /// @DnDArgument : "arg" "_reward_type"
-function spawn_reward(_reward_type) 
-{
-	/// @DnDAction : YoYo Games.Common.Temp_Variable
+function spawn_reward(_reward_type) {	/// @DnDAction : YoYo Games.Common.Temp_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 762B267B
 	/// @DnDComment : // Sets up new spawn coordinates with preset x value and random y initially
@@ -216,16 +199,12 @@ function spawn_reward(_reward_type)
 	/// @DnDComment : // Switch statement for reward types
 	/// @DnDParent : 3EB21DF1
 	/// @DnDArgument : "expr" "_reward_type"
-	var l7A1344A9_0 = _reward_type;
-	switch(l7A1344A9_0)
-	{
-		/// @DnDAction : YoYo Games.Switch.Case
+	var l7A1344A9_0 = _reward_type;switch(l7A1344A9_0){	/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 28DFD2C2
 		/// @DnDComment : // Single Coin
 		/// @DnDParent : 7A1344A9
-		case 0:
-			/// @DnDAction : YoYo Games.Common.Variable
+		case 0:	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 1EF4C99C
 			/// @DnDComment : // New y value (ground level)
@@ -253,8 +232,7 @@ function spawn_reward(_reward_type)
 			/// @DnDParent : 28DFD2C2
 			/// @DnDArgument : "expr" "10 + 1"
 			/// @DnDArgument : "var" "spawn_cooldown"
-			spawn_cooldown = 10 + 1;
-			break;
+			spawn_cooldown = 10 + 1;	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -262,8 +240,7 @@ function spawn_reward(_reward_type)
 		/// @DnDComment : // 3x3 Set Coins
 		/// @DnDParent : 7A1344A9
 		/// @DnDArgument : "const" "1"
-		case 1:
-			/// @DnDAction : YoYo Games.Common.Variable
+		case 1:	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 2EC3F36E
 			/// @DnDComment : // Sets y position at random from preset coordinates
@@ -281,8 +258,7 @@ function spawn_reward(_reward_type)
 			/// @DnDArgument : "init_temp" "1"
 			/// @DnDArgument : "cond" "_i < 3"
 			/// @DnDArgument : "expr" "_i += 1"
-			for(var _i = 0; _i < 3; _i += 1) {
-				/// @DnDAction : YoYo Games.Loops.For_Loop
+			for(var _i = 0; _i < 3; _i += 1) {	/// @DnDAction : YoYo Games.Loops.For_Loop
 				/// @DnDVersion : 1
 				/// @DnDHash : 53C8CFA7
 				/// @DnDComment : // Loops vertically for 3
@@ -291,8 +267,7 @@ function spawn_reward(_reward_type)
 				/// @DnDArgument : "init_temp" "1"
 				/// @DnDArgument : "cond" "_j < 3"
 				/// @DnDArgument : "expr" "_j += 1"
-				for(var _j = 0; _j < 3; _j += 1) {
-					/// @DnDAction : YoYo Games.Instances.Create_Instance
+				for(var _j = 0; _j < 3; _j += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
 					/// @DnDVersion : 1
 					/// @DnDHash : 2BB3A896
 					/// @DnDComment : // Creates coin object at new positions
@@ -302,9 +277,7 @@ function spawn_reward(_reward_type)
 					/// @DnDArgument : "objectid" "obj_pickup_coin"
 					/// @DnDArgument : "layer" ""Stage""
 					/// @DnDSaveInfo : "objectid" "obj_pickup_coin"
-					instance_create_layer(_new_x + _i * 70, _new_y + _j * 80, "Stage", obj_pickup_coin);
-				}
-			}
+					instance_create_layer(_new_x + _i * 70, _new_y + _j * 80, "Stage", obj_pickup_coin);}}
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -313,8 +286,7 @@ function spawn_reward(_reward_type)
 			/// @DnDParent : 4AB882C1
 			/// @DnDArgument : "expr" "10 + 3.2"
 			/// @DnDArgument : "var" "spawn_cooldown"
-			spawn_cooldown = 10 + 3.2;
-			break;
+			spawn_cooldown = 10 + 3.2;	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -322,8 +294,7 @@ function spawn_reward(_reward_type)
 		/// @DnDComment : // 9x2 Set Coins
 		/// @DnDParent : 7A1344A9
 		/// @DnDArgument : "const" "2"
-		case 2:
-			/// @DnDAction : YoYo Games.Common.Variable
+		case 2:	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 132049C9
 			/// @DnDComment : // Sets y position at random from preset coordinates
@@ -341,8 +312,7 @@ function spawn_reward(_reward_type)
 			/// @DnDArgument : "init_temp" "1"
 			/// @DnDArgument : "cond" "_i < 9"
 			/// @DnDArgument : "expr" "_i += 1"
-			for(var _i = 0; _i < 9; _i += 1) {
-				/// @DnDAction : YoYo Games.Loops.For_Loop
+			for(var _i = 0; _i < 9; _i += 1) {	/// @DnDAction : YoYo Games.Loops.For_Loop
 				/// @DnDVersion : 1
 				/// @DnDHash : 69583D6D
 				/// @DnDComment : // Loops vertically for 2
@@ -351,8 +321,7 @@ function spawn_reward(_reward_type)
 				/// @DnDArgument : "init_temp" "1"
 				/// @DnDArgument : "cond" "_j < 2"
 				/// @DnDArgument : "expr" "_j += 1"
-				for(var _j = 0; _j < 2; _j += 1) {
-					/// @DnDAction : YoYo Games.Instances.Create_Instance
+				for(var _j = 0; _j < 2; _j += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
 					/// @DnDVersion : 1
 					/// @DnDHash : 26CE6D46
 					/// @DnDComment : // Creates new object at determined position
@@ -362,9 +331,7 @@ function spawn_reward(_reward_type)
 					/// @DnDArgument : "objectid" "obj_pickup_coin"
 					/// @DnDArgument : "layer" ""Stage""
 					/// @DnDSaveInfo : "objectid" "obj_pickup_coin"
-					instance_create_layer(_new_x + _i * 70, _new_y + _j * 80, "Stage", obj_pickup_coin);
-				}
-			}
+					instance_create_layer(_new_x + _i * 70, _new_y + _j * 80, "Stage", obj_pickup_coin);}}
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -373,8 +340,7 @@ function spawn_reward(_reward_type)
 			/// @DnDParent : 246C3988
 			/// @DnDArgument : "expr" "10 + 9.9"
 			/// @DnDArgument : "var" "spawn_cooldown"
-			spawn_cooldown = 10 + 9.9;
-			break;
+			spawn_cooldown = 10 + 9.9;	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -382,8 +348,7 @@ function spawn_reward(_reward_type)
 		/// @DnDComment : // 2x9 Set Coins
 		/// @DnDParent : 7A1344A9
 		/// @DnDArgument : "const" "3"
-		case 3:
-			/// @DnDAction : YoYo Games.Common.Variable
+		case 3:	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 2662F383
 			/// @DnDComment : // Sets new y position
@@ -401,8 +366,7 @@ function spawn_reward(_reward_type)
 			/// @DnDArgument : "init_temp" "1"
 			/// @DnDArgument : "cond" "_i < 2"
 			/// @DnDArgument : "expr" "_i += 1"
-			for(var _i = 0; _i < 2; _i += 1) {
-				/// @DnDAction : YoYo Games.Loops.For_Loop
+			for(var _i = 0; _i < 2; _i += 1) {	/// @DnDAction : YoYo Games.Loops.For_Loop
 				/// @DnDVersion : 1
 				/// @DnDHash : 640370DC
 				/// @DnDComment : // Loops vertically for 9
@@ -411,8 +375,7 @@ function spawn_reward(_reward_type)
 				/// @DnDArgument : "init_temp" "1"
 				/// @DnDArgument : "cond" "_j < 9"
 				/// @DnDArgument : "expr" "_j += 1"
-				for(var _j = 0; _j < 9; _j += 1) {
-					/// @DnDAction : YoYo Games.Instances.Create_Instance
+				for(var _j = 0; _j < 9; _j += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
 					/// @DnDVersion : 1
 					/// @DnDHash : 4B7A45CA
 					/// @DnDComment : // Creates new coin object at set coordinates
@@ -422,9 +385,7 @@ function spawn_reward(_reward_type)
 					/// @DnDArgument : "objectid" "obj_pickup_coin"
 					/// @DnDArgument : "layer" ""Stage""
 					/// @DnDSaveInfo : "objectid" "obj_pickup_coin"
-					instance_create_layer(_new_x + _i * 70, _new_y + _j * 80, "Stage", obj_pickup_coin);
-				}
-			}
+					instance_create_layer(_new_x + _i * 70, _new_y + _j * 80, "Stage", obj_pickup_coin);}}
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -433,8 +394,7 @@ function spawn_reward(_reward_type)
 			/// @DnDParent : 1E76A502
 			/// @DnDArgument : "expr" "10 + 3.2"
 			/// @DnDArgument : "var" "spawn_cooldown"
-			spawn_cooldown = 10 + 3.2;
-			break;
+			spawn_cooldown = 10 + 3.2;	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -442,8 +402,7 @@ function spawn_reward(_reward_type)
 		/// @DnDComment : // 9x1 Wave Coins up curve
 		/// @DnDParent : 7A1344A9
 		/// @DnDArgument : "const" "4"
-		case 4:
-			/// @DnDAction : YoYo Games.Common.Variable
+		case 4:	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 1F23BE37
 			/// @DnDComment : // Sets y position at random from preset positions
@@ -461,8 +420,7 @@ function spawn_reward(_reward_type)
 			/// @DnDArgument : "init_temp" "1"
 			/// @DnDArgument : "cond" "_i < 9"
 			/// @DnDArgument : "expr" "_i += 1"
-			for(var _i = 0; _i < 9; _i += 1) {
-				/// @DnDAction : YoYo Games.Instances.Create_Instance
+			for(var _i = 0; _i < 9; _i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1
 				/// @DnDHash : 3810CA81
 				/// @DnDComment : // Calculates position spacing using sin curve and creates instance of object
@@ -472,8 +430,7 @@ function spawn_reward(_reward_type)
 				/// @DnDArgument : "objectid" "obj_pickup_coin"
 				/// @DnDArgument : "layer" ""Stage""
 				/// @DnDSaveInfo : "objectid" "obj_pickup_coin"
-				instance_create_layer(_new_x + _i * 70, _new_y - sin(pi / (8 / _i)) * 160, "Stage", obj_pickup_coin);
-			}
+				instance_create_layer(_new_x + _i * 70, _new_y - sin(pi / (8 / _i)) * 160, "Stage", obj_pickup_coin);}
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -482,8 +439,7 @@ function spawn_reward(_reward_type)
 			/// @DnDParent : 4E698B91
 			/// @DnDArgument : "expr" "10 + 9.9"
 			/// @DnDArgument : "var" "spawn_cooldown"
-			spawn_cooldown = 10 + 9.9;
-			break;
+			spawn_cooldown = 10 + 9.9;	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -491,8 +447,7 @@ function spawn_reward(_reward_type)
 		/// @DnDComment : // 9x1 Wave Coins down curve
 		/// @DnDParent : 7A1344A9
 		/// @DnDArgument : "const" "5"
-		case 5:
-			/// @DnDAction : YoYo Games.Common.Variable
+		case 5:	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 77A45A62
 			/// @DnDComment : // Picks y coordinate from 2 preset positions
@@ -510,8 +465,7 @@ function spawn_reward(_reward_type)
 			/// @DnDArgument : "init_temp" "1"
 			/// @DnDArgument : "cond" "_i < 9"
 			/// @DnDArgument : "expr" "_i += 1"
-			for(var _i = 0; _i < 9; _i += 1) {
-				/// @DnDAction : YoYo Games.Instances.Create_Instance
+			for(var _i = 0; _i < 9; _i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1
 				/// @DnDHash : 48214A38
 				/// @DnDComment : // Calculates position spacing using sin curve and creates instance of object
@@ -521,8 +475,7 @@ function spawn_reward(_reward_type)
 				/// @DnDArgument : "objectid" "obj_pickup_coin"
 				/// @DnDArgument : "layer" ""Stage""
 				/// @DnDSaveInfo : "objectid" "obj_pickup_coin"
-				instance_create_layer(_new_x + _i * 70,  _new_y + sin(pi / (8 / _i)) * 160, "Stage", obj_pickup_coin);
-			}
+				instance_create_layer(_new_x + _i * 70,  _new_y + sin(pi / (8 / _i)) * 160, "Stage", obj_pickup_coin);}
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -531,8 +484,7 @@ function spawn_reward(_reward_type)
 			/// @DnDParent : 21663D7D
 			/// @DnDArgument : "expr" "10 + 9.9"
 			/// @DnDArgument : "var" "spawn_cooldown"
-			spawn_cooldown = 10 + 9.9;
-			break;
+			spawn_cooldown = 10 + 9.9;	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -540,8 +492,7 @@ function spawn_reward(_reward_type)
 		/// @DnDComment : // 17x2 Wave Coins twin curves
 		/// @DnDParent : 7A1344A9
 		/// @DnDArgument : "const" "6"
-		case 6:
-			/// @DnDAction : YoYo Games.Common.Variable
+		case 6:	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 4D029FA8
 			/// @DnDComment : // Sets middle y position
@@ -559,8 +510,7 @@ function spawn_reward(_reward_type)
 			/// @DnDArgument : "init_temp" "1"
 			/// @DnDArgument : "cond" "_i < 17"
 			/// @DnDArgument : "expr" "_i += 1"
-			for(var _i = 0; _i < 17; _i += 1) {
-				/// @DnDAction : YoYo Games.Instances.Create_Instance
+			for(var _i = 0; _i < 17; _i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1
 				/// @DnDHash : 1A1C7641
 				/// @DnDComment : // Places objects with sin curve
@@ -570,8 +520,7 @@ function spawn_reward(_reward_type)
 				/// @DnDArgument : "objectid" "obj_pickup_coin"
 				/// @DnDArgument : "layer" ""Stage""
 				/// @DnDSaveInfo : "objectid" "obj_pickup_coin"
-				instance_create_layer(_new_x + _i * 70, _new_y + sin(pi / (8 / _i)) * 160, "Stage", obj_pickup_coin);
-			}
+				instance_create_layer(_new_x + _i * 70, _new_y + sin(pi / (8 / _i)) * 160, "Stage", obj_pickup_coin);}
 		
 			/// @DnDAction : YoYo Games.Loops.For_Loop
 			/// @DnDVersion : 1
@@ -582,8 +531,7 @@ function spawn_reward(_reward_type)
 			/// @DnDArgument : "init_temp" "1"
 			/// @DnDArgument : "cond" "_i < 17"
 			/// @DnDArgument : "expr" "_i += 1"
-			for(var _i = 0; _i < 17; _i += 1) {
-				/// @DnDAction : YoYo Games.Instances.Create_Instance
+			for(var _i = 0; _i < 17; _i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1
 				/// @DnDHash : 428533F8
 				/// @DnDComment : // Places objects with sin curve
@@ -593,8 +541,7 @@ function spawn_reward(_reward_type)
 				/// @DnDArgument : "objectid" "obj_pickup_coin"
 				/// @DnDArgument : "layer" ""Stage""
 				/// @DnDSaveInfo : "objectid" "obj_pickup_coin"
-				instance_create_layer(_new_x + _i * 70, _new_y - sin(pi / (8 / _i)) * 160, "Stage", obj_pickup_coin);
-			}
+				instance_create_layer(_new_x + _i * 70, _new_y - sin(pi / (8 / _i)) * 160, "Stage", obj_pickup_coin);}
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -603,8 +550,7 @@ function spawn_reward(_reward_type)
 			/// @DnDParent : 68675E97
 			/// @DnDArgument : "expr" "10 + 18.9"
 			/// @DnDArgument : "var" "spawn_cooldown"
-			spawn_cooldown = 10 + 18.9;
-			break;
+			spawn_cooldown = 10 + 18.9;	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -612,8 +558,7 @@ function spawn_reward(_reward_type)
 		/// @DnDComment : // Chest
 		/// @DnDParent : 7A1344A9
 		/// @DnDArgument : "const" "7"
-		case 7:
-			/// @DnDAction : YoYo Games.Common.Variable
+		case 7:	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 2980BB17
 			/// @DnDComment : // Sets new position for spawn coordinates (Ground Level)
@@ -649,7 +594,4 @@ function spawn_reward(_reward_type)
 			/// @DnDParent : 14E9A5BB
 			/// @DnDArgument : "expr" "10 + 3.7"
 			/// @DnDArgument : "var" "spawn_cooldown"
-			spawn_cooldown = 10 + 3.7;
-			break;
-	}
-}
+			spawn_cooldown = 10 + 3.7;	break;}}
