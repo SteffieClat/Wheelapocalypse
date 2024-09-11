@@ -460,8 +460,8 @@ if(obj_game_manager.current_game_state != GAME_STATE.PAUSED){	/// @DnDAction :
 			/// @DnDHash : 34BA6373
 			/// @DnDComment : // Check if keyboard, mouse or gamepad has jumped
 			/// @DnDParent : 1B0BD4AD
-			/// @DnDArgument : "expr" "keyboard_check_direct(vk_space) || mouse_check_button(mb_left) || _gamepad_jump_tutorial"
-			if(keyboard_check_direct(vk_space) || mouse_check_button(mb_left) || _gamepad_jump_tutorial){	/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDArgument : "expr" "keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_left) || _gamepad_jump_tutorial"
+			if(keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_left) || _gamepad_jump_tutorial){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 5AC63419
 				/// @DnDComment : // Set has jumped variable to true
@@ -476,9 +476,8 @@ if(obj_game_manager.current_game_state != GAME_STATE.PAUSED){	/// @DnDAction :
 				/// @DnDComment : // Add jump strenght to y velosity
 				/// @DnDParent : 34BA6373
 				/// @DnDArgument : "expr" "jump_strength * _delta_time"
-				/// @DnDArgument : "expr_relative" "1"
 				/// @DnDArgument : "var" "y_velo"
-				y_velo += jump_strength * _delta_time;
+				y_velo = jump_strength * _delta_time;
 			
 				/// @DnDAction : YoYo Games.Common.If_Expression
 				/// @DnDVersion : 1
