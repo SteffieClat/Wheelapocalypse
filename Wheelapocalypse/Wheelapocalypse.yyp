@@ -121,6 +121,7 @@
     {"id":{"name":"obj_spawn_manager","path":"objects/obj_spawn_manager/obj_spawn_manager.yy",},},
     {"id":{"name":"obj_splash_manager","path":"objects/obj_splash_manager/obj_splash_manager.yy",},},
     {"id":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},},
+    {"id":{"name":"Otimer","path":"objects/Otimer/Otimer.yy",},},
     {"id":{"name":"ps_chest_blast","path":"particles/ps_chest_blast/ps_chest_blast.yy",},},
     {"id":{"name":"ps_coin","path":"particles/ps_coin/ps_coin.yy",},},
     {"id":{"name":"ps_confetti","path":"particles/ps_confetti/ps_confetti.yy",},},
@@ -146,6 +147,7 @@
     {"id":{"name":"ps_speed_booster_aura","path":"particles/ps_speed_booster_aura/ps_speed_booster_aura.yy",},},
     {"id":{"name":"ps_speed_booster_flame","path":"particles/ps_speed_booster_flame/ps_speed_booster_flame.yy",},},
     {"id":{"name":"ps_speed_booster_smoke","path":"particles/ps_speed_booster_smoke/ps_speed_booster_smoke.yy",},},
+    {"id":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
     {"id":{"name":"rm_splash","path":"rooms/rm_splash/rm_splash.yy",},},
     {"id":{"name":"scr_custom","path":"scripts/scr_custom/scr_custom.yy",},},
@@ -195,6 +197,7 @@
     {"id":{"name":"snd_speed_bonus_collection","path":"sounds/snd_speed_bonus_collection/snd_speed_bonus_collection.yy",},},
     {"id":{"name":"snd_start_game_button","path":"sounds/snd_start_game_button/snd_start_game_button.yy",},},
     {"id":{"name":"snd_tutorial_text_popup","path":"sounds/snd_tutorial_text_popup/snd_tutorial_text_popup.yy",},},
+    {"id":{"name":"chick","path":"sprites/chick/chick.yy",},},
     {"id":{"name":"spr_air_1","path":"sprites/spr_air_1/spr_air_1.yy",},},
     {"id":{"name":"spr_air_2","path":"sprites/spr_air_2/spr_air_2.yy",},},
     {"id":{"name":"spr_air_3","path":"sprites/spr_air_3/spr_air_3.yy",},},
@@ -271,6 +274,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_splash","path":"rooms/rm_splash/rm_splash.yy",},},
     {"roomId":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
+    {"roomId":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
