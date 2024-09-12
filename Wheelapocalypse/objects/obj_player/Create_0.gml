@@ -51,7 +51,7 @@ current_player_state = PLAYER_STATE.RUN;
 /// @DnDHash : 76DC0365
 /// @DnDComment : // Variables used for the players movement
 /// @DnDInput : 4
-/// @DnDArgument : "expr" "30"
+/// @DnDArgument : "expr" "35"
 /// @DnDArgument : "expr_1" "10"
 /// @DnDArgument : "expr_2" "0.8"
 /// @DnDArgument : "expr_3" "0.0"
@@ -59,7 +59,7 @@ current_player_state = PLAYER_STATE.RUN;
 /// @DnDArgument : "var_1" "jump_threshold"
 /// @DnDArgument : "var_2" "gravity_strength"
 /// @DnDArgument : "var_3" "y_velo"
-jump_strength = 30;
+jump_strength = 35;
 jump_threshold = 10;
 gravity_strength = 0.8;
 y_velo = 0.0;
