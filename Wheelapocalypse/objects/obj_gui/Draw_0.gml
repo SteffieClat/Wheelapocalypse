@@ -23,6 +23,14 @@ else{	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDArgument : "var" "image_alpha"
 	image_alpha = lerp(image_alpha, 1.0, 0.05);}
 
+/// @DnDAction : YoYo Games.Drawing.Draw_Sprite
+/// @DnDVersion : 1
+/// @DnDHash : 3EB37CEA
+/// @DnDArgument : "x" "-40"
+/// @DnDArgument : "sprite" "spr_flocking_wall"
+/// @DnDSaveInfo : "sprite" "spr_flocking_wall"
+draw_sprite(spr_flocking_wall, 0, -40, 0);
+
 /// @DnDAction : YoYo Games.Drawing.Draw_Self
 /// @DnDVersion : 1
 /// @DnDHash : 3136AA95
