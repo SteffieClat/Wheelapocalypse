@@ -5,21 +5,21 @@
   "bbox_bottom":469,
   "bbox_left":0,
   "bbox_right":511,
-  "bbox_top":168,
+  "bbox_top":151,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"257077c5-8181-42a3-96cc-47f42ec935c4","name":"257077c5-8181-42a3-96cc-47f42ec935c4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"077c56c7-aa0f-4575-ae93-8f9bd0b35d61","name":"077c56c7-aa0f-4575-ae93-8f9bd0b35d61","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":470,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"3f1195c0-0421-40f3-a80e-402b353c90f4","blendMode":0,"displayName":"default","isLocked":false,"name":"3f1195c0-0421-40f3-a80e-402b353c90f4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"02953bbd-d9a9-4028-9e49-0c17f4d00925","blendMode":0,"displayName":"default","isLocked":false,"name":"02953bbd-d9a9-4028-9e49-0c17f4d00925","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_runway_outside_1",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"257077c5-8181-42a3-96cc-47f42ec935c4","path":"sprites/spr_runway_outside_1/spr_runway_outside_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1fcdc78c-6b01-488c-831b-7a7d7c084e20","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"077c56c7-aa0f-4575-ae93-8f9bd0b35d61","path":"sprites/spr_runway_outside_1/spr_runway_outside_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"26a027de-1e10-4493-a2eb-2568799dceb2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
