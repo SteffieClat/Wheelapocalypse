@@ -11,9 +11,9 @@ tip_type = 0;
 /// @DnDVersion : 1
 /// @DnDHash : 6056E2CA
 /// @DnDComment : // Variable for tip message string
-/// @DnDArgument : "expr" ""Welcome to Chicken Run!\nPress any key to continue""
+/// @DnDArgument : "expr" ""Welcome to Wheel Apocalypse!\nPress any key to continue""
 /// @DnDArgument : "var" "tip_message"
-tip_message = "Welcome to Chicken Run!\nPress any key to continue";
+tip_message = "Welcome to Wheel Apocalypse!\nPress any key to continue";
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
@@ -53,16 +53,13 @@ var _gamepad_count = gamepad_get_device_count();
 /// @DnDArgument : "init_temp" "1"
 /// @DnDArgument : "cond" "_i < _gamepad_count"
 /// @DnDArgument : "expr" "_i += 1"
-for(var _i = 0; _i < _gamepad_count; _i += 1) {
-	/// @DnDAction : YoYo Games.Common.If_Expression
+for(var _i = 0; _i < _gamepad_count; _i += 1) {	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
 	/// @DnDHash : 20FE970D
 	/// @DnDComment : // If gamepad is connected
 	/// @DnDParent : 0D41B747
 	/// @DnDArgument : "expr" "gamepad_is_connected(_i)"
-	if(gamepad_is_connected(_i))
-	{
-		/// @DnDAction : YoYo Games.Common.Variable
+	if(gamepad_is_connected(_i)){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 012F5CD4
 		/// @DnDComment : // Set gamepad state to true
@@ -76,28 +73,23 @@ for(var _i = 0; _i < _gamepad_count; _i += 1) {
 		/// @DnDHash : 165619F3
 		/// @DnDComment : // Change default message
 		/// @DnDParent : 20FE970D
-		/// @DnDArgument : "expr" ""Welcome to Chicken Run!\nPress A or Cross button to continue""
+		/// @DnDArgument : "expr" ""Welcome to Wheel Apocalypse!\nPress A or Cross button to continue""
 		/// @DnDArgument : "var" "tip_message"
-		tip_message = "Welcome to Chicken Run!\nPress A or Cross button to continue";
-	}
-}
+		tip_message = "Welcome to Wheel Apocalypse!\nPress A or Cross button to continue";}}
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 657B8B92
 /// @DnDComment : // Check if touch input
 /// @DnDArgument : "expr" "global.is_touch"
-if(global.is_touch)
-{
-	/// @DnDAction : YoYo Games.Common.Variable
+if(global.is_touch){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 74BC39D1
 	/// @DnDComment : // Change message
 	/// @DnDParent : 657B8B92
-	/// @DnDArgument : "expr" ""Welcome to Chicken Run!\nTap screen to continue""
+	/// @DnDArgument : "expr" ""Welcome to Wheel Apocalypse!\nTap screen to continue""
 	/// @DnDArgument : "var" "tip_message"
-	tip_message = "Welcome to Chicken Run!\nTap screen to continue";
-}
+	tip_message = "Welcome to Wheel Apocalypse!\nTap screen to continue";}
 
 /// @DnDAction : YoYo Games.Common.Temp_Variable
 /// @DnDVersion : 1

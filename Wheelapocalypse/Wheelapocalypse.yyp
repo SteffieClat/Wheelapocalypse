@@ -230,6 +230,7 @@
     {"id":{"name":"spr_farground_2","path":"sprites/spr_farground_2/spr_farground_2.yy",},},
     {"id":{"name":"spr_farground_3","path":"sprites/spr_farground_3/spr_farground_3.yy",},},
     {"id":{"name":"spr_flag","path":"sprites/spr_flag/spr_flag.yy",},},
+    {"id":{"name":"spr_flocking_wall","path":"sprites/spr_flocking_wall/spr_flocking_wall.yy",},},
     {"id":{"name":"spr_flower_1","path":"sprites/spr_flower_1/spr_flower_1.yy",},},
     {"id":{"name":"spr_flower_2","path":"sprites/spr_flower_2/spr_flower_2.yy",},},
     {"id":{"name":"spr_flower_3","path":"sprites/spr_flower_3/spr_flower_3.yy",},},
